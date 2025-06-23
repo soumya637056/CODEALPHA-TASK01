@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>📸 My Image Gallery</h1>
+    <p>Browse, filter, and upload your favorite photos!</p>
+  </header>
+
+  <!-- Controls -->
+  <section class="controls">
+    <input type="text" id="searchInput" placeholder="🔍 Search by name or category..." />
+    <div class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="nature">🌳 Nature</button>
+      <button data-filter="city">🏙️ City</button>
+      <button data-filter="people">🧑 People</button>
+    </div>
+    <label class="upload-label">
+      ⬆️ Upload Image
+      <input type="file" id="imageUpload" accept="image/*" hidden />
+    </label>
+  </section>
+
+  <!-- Gallery -->
+  <main class="gallery" id="gallery">
+    <img src="https://source.unsplash.com/300x200/?nature,water" alt="Waterfall" data-category="nature">
+    <img src="https://source.unsplash.com/300x200/?city,building" alt="Skyscraper" data-category="city">
+    <img src="https://source.unsplash.com/300x200/?people,portrait" alt="Portrait" data-category="people">
+    <img src="https://source.unsplash.com/300x200/?nature,forest" alt="Forest" data-category="nature">
+    <img src="https://source.unsplash.com/300x200/?city,night" alt="Night City" data-category="city">
+    <img src="https://source.unsplash.com/300x200/?people,smile" alt="Smiling Person" data-category="people">
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="">
+    <div class="lightbox-controls">
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 MyGallery | Created with 💖</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
